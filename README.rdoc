@@ -1,6 +1,6 @@
 = devise_aes_encryptable
 
-Description goes here.
+Adds AES encryption support for Devise
 
 == Contributing to devise_aes_encryptable
  
