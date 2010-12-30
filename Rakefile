@@ -16,13 +16,13 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/chicks/devise_aes_encryptable"
   gem.license = "MIT"
   gem.summary = %Q{AES Encryption for Devise}
-  gem.description = %Q{Adds Devise::Encryptors::AES.digest and Devise::Encryptors::AES.decrypt}
+  gem.description = %Q{Adds Devise::Encryptors::Aes256.digest and Devise::Encryptors::Aes256.decrypt}
   gem.email = "carl.hicks@gmail.com"
   gem.authors = ["Carl Hicks"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  gem.add_runtime_dependency 'aes', '>= 0.3'
-  gem.add_runtime_dependency 'devise', '>= 1.1.3'
+#  gem.add_runtime_dependency 'aes', '>= 0.3'
+#  gem.add_runtime_dependency 'devise', '>= 1.1.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
