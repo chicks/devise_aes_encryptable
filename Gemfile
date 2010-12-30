@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem "aes", ">= 0.3.0"
-gem "devise", ">= 1.1.5"
+gem "devise", ">= 1.1.3"
 gem "rails", "~> 3.0.0"
 
 group :development do
