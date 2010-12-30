@@ -4,7 +4,7 @@ module Devise
   module Encryptors
     # = AES
     # Uses the AES algorithm to encrypt passwords.
-    class AES
+    class Aes256
       # Returns a Base64 encrypted password where pepper is used for the key,
       # and the initialization_vector is randomly generated and prepended onto
       # encoded ciphertext

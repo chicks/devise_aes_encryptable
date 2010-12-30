@@ -1,1 +1,1 @@
-require 'encryptors/aes'
+require 'encryptors/aes256'
