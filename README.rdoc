@@ -2,6 +2,12 @@
 
 Adds AES encryption support for Devise
 
+= Synopsis
+
+1. Add devise_aes_encryptable to your Gemfile
+2. bundle install
+3. Set config.encryptor = :aes256 in config/initializers/devise.rb
+
 == Contributing to devise_aes_encryptable
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
