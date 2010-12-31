@@ -7,12 +7,15 @@ Adds AES encryption support for Devise
 == Installation
 1. Add <tt>devise_aes_encryptable</tt> to your Gemfile
 2. <tt>bundle install</tt>
-3. <tt>config.encryptor = :aes256</tt> in <tt>config/initializers/devise.rb</tt>
+
+== Configuration 
+In <tt>config/initializers/devise.rb</tt>
+  config.encryptor = :aes256
 
 == Decryption
-<tt>::AES.decrypt(Devise.pepper, encrypted_password)</tt>
+  ::AES.decrypt(Devise.pepper, encrypted_password)
 or
-<tt>::Devise::Encryptors::Aes256.decrypt(encrypted_password, Devise.pepper)</tt>
+  ::Devise::Encryptors::Aes256.decrypt(encrypted_password, Devise.pepper)
   
 == Contributing to devise_aes_encryptable
  
