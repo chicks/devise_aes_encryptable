@@ -10,14 +10,17 @@ module Devise
         # and the initialization_vector is randomly generated and prepended onto
         # encoded ciphertext
         def digest(password, stretches, salt, pepper)
-          digest = ::AES.encrypt(password, pepper, {:iv => salt})
+          ::AES.encrypt(password, pepper, {:iv => salt})
         end
         alias :encrypt :digest
-        
+        # Returns a base64 encoded salt
+        def salt(stretches)
+          ::AES.iv(:base_64)
+        end
         # Returns the plaintext password where pepper is used for the key,
         # and the initialization_vector is read from the Base64 encoded ciphertext
         def decrypt(encrypted_password, pepper)        
-          password = ::AES.decrypt(encrypted_password, pepper)
+          ::AES.decrypt(encrypted_password, pepper)
         end
       end
     end
