@@ -13,7 +13,7 @@ In <tt>config/initializers/devise.rb</tt>
   config.encryptor = :aes256
 
 == Decryption
-  ::AES.decrypt(Devise.pepper, encrypted_password)
+  ::AES.decrypt(encrypted_password, Devise.pepper)
 or
   ::Devise::Encryptors::Aes256.decrypt(encrypted_password, Devise.pepper)
   
