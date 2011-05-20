@@ -10,8 +10,10 @@ Adds AES encryption support for Devise
 
 == Configuration 
 1. In <tt>config/initializers/devise.rb</tt>
-  config.encryptor = :aes256
-  config.pepper = "bf6a14..."
+    # Enable the AES encryptor
+    config.encryptor = :aes256
+    # Uncomment the generated pepper
+    config.pepper = "bf6a14..."
 2. Enable <tt>:encryptable</tt> on your model
 
 == Decryption
