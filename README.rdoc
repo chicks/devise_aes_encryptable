@@ -9,8 +9,11 @@ Adds AES encryption support for Devise
 2. <tt>bundle install</tt>
 
 == Configuration 
-In <tt>config/initializers/devise.rb</tt>
+1. In <tt>config/initializers/devise.rb</tt>
   config.encryptor = :aes256
+  config.pepper = "bf6a14..."
+  
+2. Enable <tt>:encryptable</tt> on your model
 
 == Decryption
   ::AES.decrypt(encrypted_password, Devise.pepper)
