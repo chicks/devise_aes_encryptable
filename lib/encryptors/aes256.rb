@@ -11,7 +11,11 @@ module Devise
           # and the initialization_vector is randomly generated and prepended onto
           # encoded ciphertext
           def digest(password, stretches, salt, pepper)
-            ::AES.encrypt(password, pepper, {:iv => salt})
+            begin
+              ::AES.encrypt(password, pepper, {:iv => salt}) if password
+            rescue
+              nil
+            end
           end
           alias :encrypt :digest
           # Returns a base64 encoded salt
